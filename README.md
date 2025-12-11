@@ -2,11 +2,12 @@
 
 <p align="center">
   <img
-    src="https://raw.githubusercontent.com/htomoya16/htomoya16/output/profile-gitblock.svg"
+    src="https://raw.githubusercontent.com/htomoya16/htomoya16/output-3d/profile-gitblock.svg"
     alt="GitHub Profile 3D Git Block"
     width="600"
   />
 </p>
+
 
 <p align="center">
   <picture>
