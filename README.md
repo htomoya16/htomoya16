@@ -1,3 +1,9 @@
 ## Hi there 👋
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs?username=htomoya16&show_icons=true&locale=ja&layout=compact&theme=chartreuse-dark" alt="Top Languages" /></p>
+<p align="center">
+<a href="https://gitstar-ranking.com/Fovvy" title="Snek 🐍"><img width="500" src="https://raw.githubusercontent.com/Lissy93/Lissy93/master/assets/github-snake.svg" /></a>
+</p>
+
+</details>
+
+<p align="center"><a href="https:parastus.me</sub></sup></a></p>
