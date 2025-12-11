@@ -1,7 +1,7 @@
 name: Profile Art (Snake + 3D)
 
 on:
-  # 毎日0時（UTC）に自動実行
+  # 毎日 0:00 UTC（JST 9:00）に実行
   schedule:
     - cron: "0 0 * * *"
   # 手動実行
@@ -18,27 +18,36 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 1) snake を生成（出力先を dist 配下に）
+      # 1) snake を生成して dist 直下に出力
       - name: Generate snake
         uses: Platane/snk@v3
         with:
-          github_user_name: htomoya16
+          github_user_name: htomoya16         # ← 自分のユーザー名
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      # 2) 3D コントリビューションを生成（カレントに profile-3d-contrib/* を吐く）
-      - name: Generate 3D contrib
+      # 2) 3D コントリビューション画像を生成（カレントに profile-3d-contrib/* ができる）
+      - name: Generate 3D contribution graphs
         uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
-      # 3) 3D の生成物を dist にまとめる
-      - name: Move 3D files into dist
+      # 3) dist ディレクトリをクリーンにして、そこに 3D のファイルをまとめる
+      - name: Prepare dist directory
         run: |
-          mkdir -p dist/profile-3d-contrib
-          cp -r profile-3d-contrib/* dist/profile-3d-contrib/
+          # 念のため dist という名前のファイル / ディレクトリを全削除
+          rm -rf dist
+          mkdir -p dist
+
+          # snake は Platane/snk 側で dist に既に出力されているのでそのまま残す
+
+          # 3D グラフ用ディレクトリを dist 配下に作成してコピー
+          if [ -d "profile-3d-contrib" ]; then
+            mkdir -p dist/profile-3d-contrib
+            cp -r profile-3d-contrib/* dist/profile-3d-contrib/
+          fi
 
       # 4) dist 全体を output ブランチにデプロイ
       - name: Publish to output branch
