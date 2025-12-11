@@ -1,0 +1,50 @@
+name: Profile Art (Snake + 3D)
+
+on:
+  # 毎日0時（UTC）に自動実行
+  schedule:
+    - cron: "0 0 * * *"
+  # 手動実行
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 1) snake を生成（出力先を dist 配下に）
+      - name: Generate snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: htomoya16
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      # 2) 3D コントリビューションを生成（カレントに profile-3d-contrib/* を吐く）
+      - name: Generate 3D contrib
+        uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      # 3) 3D の生成物を dist にまとめる
+      - name: Move 3D files into dist
+        run: |
+          mkdir -p dist/profile-3d-contrib
+          cp -r profile-3d-contrib/* dist/profile-3d-contrib/
+
+      # 4) dist 全体を output ブランチにデプロイ
+      - name: Publish to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
