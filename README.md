@@ -1,9 +1,7 @@
-## Hi there 👋
-
 <p align="center">
-<a href="https://gitstar-ranking.com/Fovvy" title="Snek 🐍"><img width="500" src="https://raw.githubusercontent.com/Lissy93/Lissy93/master/assets/github-snake.svg" /></a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/htomoya16/htomoya16/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/htomoya16/htomoya16/output/github-contribution-grid-snake.svg" />
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/htomoya16/htomoya16/output/github-contribution-grid-snake.svg" />
+  </picture>
 </p>
-
-</details>
-
-<p align="center"><a href="https:parastus.me</sub></sup></a></p>
