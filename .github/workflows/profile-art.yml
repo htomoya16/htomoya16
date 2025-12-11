@@ -22,32 +22,24 @@ jobs:
       - name: Generate snake
         uses: Platane/snk@v3
         with:
-          github_user_name: htomoya16         # ← 自分のユーザー名
+          github_user_name: htomoya16   # ← あなたの GitHub ユーザー名
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      # 2) 3D コントリビューション画像を生成（カレントに profile-3d-contrib/* ができる）
+      # 2) 3D コントリビューション画像を生成
+      #    profile-3d-contrib/ 以下に SVG 群ができる
       - name: Generate 3D contribution graphs
         uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
-      # 3) dist ディレクトリをクリーンにして、そこに 3D のファイルをまとめる
-      - name: Prepare dist directory
+      # 3) 3D のファイルを dist/profile-3d-contrib にまとめてコピー
+      - name: Copy 3D graphs into dist
         run: |
-          # 念のため dist という名前のファイル / ディレクトリを全削除
-          rm -rf dist
-          mkdir -p dist
-
-          # snake は Platane/snk 側で dist に既に出力されているのでそのまま残す
-
-          # 3D グラフ用ディレクトリを dist 配下に作成してコピー
-          if [ -d "profile-3d-contrib" ]; then
-            mkdir -p dist/profile-3d-contrib
-            cp -r profile-3d-contrib/* dist/profile-3d-contrib/
-          fi
+          mkdir -p dist/profile-3d-contrib
+          cp -r profile-3d-contrib/* dist/profile-3d-contrib/
 
       # 4) dist 全体を output ブランチにデプロイ
       - name: Publish to output branch
