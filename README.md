@@ -1,4 +1,3 @@
 ## Hi there 👋
 
-[![Anurag's GitHub stats-Light](https://github-readme-stats.vercel.app/api?username=htomoya16&show_icons=true&theme=default#gh-light-mode-only)](https://github.com/anuraghazra/github-readme-stats#gh-light-mode-only)
-
+<img src="https://github-readme-stats.vercel.app/api/top-langs?username=htomoya16&show_icons=true&locale=ja&layout=compact&theme=chartreuse-dark" alt="Top Languages" /></p>
