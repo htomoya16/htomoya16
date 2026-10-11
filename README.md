@@ -2,7 +2,12 @@
 
 情報系の大学院で研究・学業に専念しながら、バックエンド開発を中心に学習している学生エンジニアです。
 
-学部ではVRアプリケーションやマイコン制御に取り組み、ソフトウェアとハードウェアの両面を経験しました。現在は個人開発を通じて、API、データベース、認証、CI/CDなど、Webサービスを裏側から支える仕組みづくりを継続的に学んでいます！
+学部ではVRアプリケーションやマイコン制御に取り組み、ソフトウェアとハードウェアの両面を経験しました。
+
+現在は個人開発やインターンを通じて、API、データベース、認証、CI/CDなど、バックエンド技術を継続的に学んでいます！
+
+**ぜひポートフォリオを閲覧してください！！！！！！！！！！！！！！**
+* Portfolio: [https://htomoya16.dev/](https://htomoya16.dev/)
 
 ## Skills
 
@@ -13,7 +18,7 @@
 * **Other:** Unity, Raspberry Pi
 
 ## Projects
-特に見てほしいプロジェクトは以下の２つです！
+個人プロジェクトで見てほしいものは以下の２つです！
 ### Wake-on-LAN Dashboard
 
 外出先からVPN経由で自宅PCを安全に起動・管理するWebダッシュボードです。
@@ -27,11 +32,6 @@ FastAPI、React、SQLite、nginx、GitHub Actionsを用いて、PC管理、Wake-
 VR, Unity、C#、ESP32、ポテンショメータを用いたセンサ値処理、サーボ制御を用いて、VR空間とハプティックグローブを連携しました。
 
 [https://github.com/htomoya16/hapticpiano](https://github.com/htomoya16/hapticpiano)
-
-## Links
-各プロジェクトの開発背景、開発内容、技術スタックに加えて、実装時の工夫点・苦労した点とその解決、学びをポートフォリオにまとめています。
-* Portfolio: [https://htomoya16.dev/](https://htomoya16.dev/)
-
 
 
 <p align="center">
