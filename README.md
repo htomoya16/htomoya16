@@ -14,7 +14,7 @@
 * **Main Language:** Go, Python
 * **Backend:** Echo, FastAPI, PostgreSQL, MySQL, SQLite, Heroku
 * **Infra:** Docker, nginx, GitHub Actions
-* **Tools:** Git, GitHub, VS Code, Figma, Codex, Claude Code
+* **Tools:** Git, GitHub, Figma, Codex, Claude Code
 * **Other:** Unity, Raspberry Pi
 
 ## Projects
