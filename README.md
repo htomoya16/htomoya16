@@ -11,8 +11,8 @@
 
 ## Skills
 
-* **Main Language:** Go, Python
-* **Backend:** Echo, FastAPI, PostgreSQL, MySQL, SQLite, Heroku
+* **Main Language:** Python, Java, Go
+* **Backend:** FastAPI, Spring boot, Echo, PostgreSQL, MySQL, SQLite, Heroku
 * **Infra:** Docker, nginx, GitHub Actions
 * **Tools:** Git, GitHub, Figma, Codex, Claude Code
 * **Other:** Unity, Raspberry Pi
